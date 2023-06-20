@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Unbounded", cursive;
+}
+body{
+    overflow-x: hidden;
+}
+.bg_img{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    animation:image 30s ease-in infinite;
+}
+@keyframes image{
+    0%{
+        background-image: url('https://images.unsplash.com/photo-1536431311719-398b6704d4cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
+    }
+    50%{
+        background-image: url('https://images.unsplash.com/photo-1475113548554-5a36f1f523d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
+    }
+    100%{
+        background-image: url('https://images.unsplash.com/photo-1455218873509-8097305ee378?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
+    }
+}
+.input{
+    background-color: rgba(255,255, 255, 0.75);
+}
+.group{
+    display: flex;
+    gap: 19px;
+    align-items: center;
+    margin: 1rem 0;
+}
+.city,
+.temp{
+    font-size: 3rem;
+}
+.box-container{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.box{
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: rgba(0,0,0,0.75);
+    width:220px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.2s;
+}
+
+.box:hover{
+    transform: scale(1.1);
+}
+@media only screen and (max-width:730px) {
+    .bg_img{
+        padding: 2rem 0;
+    }
+    .box-container{
+        flex-direction: column;
+    }
+    .box,
+    .input{
+        width: 70vw;
+    }
+}
